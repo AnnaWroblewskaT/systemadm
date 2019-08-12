@@ -14,7 +14,7 @@
         "build:sass": "node-sass --output-style compact -o css sass",
         "build:autoprefixer": "autoprefixer-cli css/style.css",
         "build-dev:sass": "node-sass --output-style expanded --source-map true -o css sass",
-        "watch": "node-sass -watch scss -o css"
+        "watch": "npm run build:sass && npm run build:sass -- -w"
     },
     "keywords": [],
     "author": "",
